@@ -6,7 +6,7 @@ const asyncFn = () => {
   });
 };
 export default async function Home() {
-  const name = await asyncFn();
+  const name:string = await asyncFn() as any;
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
