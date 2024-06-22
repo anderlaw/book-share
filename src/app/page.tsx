@@ -1,6 +1,12 @@
 import Image from "next/image";
 
-export default function Home() {
+const asyncFn = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => resolve("AndyLaw"), 1000);
+  });
+};
+export default async function Home() {
+  const name = await asyncFn();
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
@@ -15,15 +21,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
+            By {name}
           </a>
         </div>
       </div>
@@ -111,4 +109,4 @@ export default function Home() {
     </main>
   );
 }
-export const runtime = 'edge';
+export const runtime = "edge";
