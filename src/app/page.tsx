@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const asyncFn = () => {
   return new Promise((resolve, reject) => {
-    setTimeout(() => resolve("AndyLaw"), 1000);
+    setTimeout(() => resolve("AndyLaw"), 2000);
   });
 };
 export default async function Home() {
