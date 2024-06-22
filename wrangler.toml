@@ -1,0 +1,12 @@
+name = "your-nextjs-app"
+type = "javascript"
+
+account_id = "ea45bcecf759af4836b6444c084d6f6f"
+workers_dev = true
+
+[site]
+bucket = "./out"
+entry-point = "./"
+
+[build]
+command = "npm run build"
